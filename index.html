@@ -1,113 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venta de Articulos Electronicos</title>
-</head> <!--Meta etiquetas-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com">
+  <link href = "https://fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,300; 0,700; 1400 & display = swap "rel =" stylesheet ">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Style2.css">
+</head>
+
 <body>
-<header>
-    <nav>
-        <div>
-            <img src="" alt="logo">
-        </div><!--Logo-->
-        <div>
-            <ul>
-                <li> <a href="#">Inicio</a></li>
-                <li> <a href="#">Articulos</a></li>
-                <li> <a href="#">Servicios</a></li>
-                <div>
-                    <p>Carrito</p>
-                </div><!--Carrito de compra-->
-            </ul>
-        </div><!--Links-->
-    </nav>
+  <header>
+   <div class="menu"> 
+    <div class="contenedor">
+     
+      <nav class="nav">
+        <div class="logo">
+          <i class="fa fa-laptop"></i>
+        </div>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+            <li><a href="#">Articulos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+           <li><a href="#">Compra</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <div class="titular"> 
+    <h1>Compaq Electronica</h1>
+    <p>Elige ,paga y recibilo sin moverte de tu casa.</p>
+  </div>
 </header>
 
-<main>
-
-<section>
+<section id="programs" class="section-programs">
+  <div class="contenedor">
     <h2>Articulos</h2>
-    <article>
-        <div>
-            <img src="/img/redes.jpg" alt="articulo1">
-        </div>
-        <div>
-            <h3>Cables de Red</h3>
-            <p> desde $300</p>
-        </div>
-    </article>
-    <article>
-        <div>
-            <img src="/img/placa.jpg" alt="articulo2">
-        </div>
-        <div>
-            <h3>Placa de video</h3>
-            <p> $18000</p>
-        </div>
-    </article>
-    <article>
-        <div>
-            <img src="img/monitor.jpg" alt="articulo3">
-        </div>
-        <div>
+      <div class="contenedor-programs">
+        <div class="programs">
+            <img src="img/monitor.jpg" alt="">
             <h3>Monitor</h3>
-            <p>desde $8000</p>
+            <p>$7800</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+        <div class="programs">
+            <img src="img/router.jpg" alt="">
+            <h3>Router </h3>
+            <p>$3500</p>
+            <button class="btn-comprar">Agregar</button>
         </div>
-    </article>
-    <article>
-        <div>
-            <img src="/img/pc.jpg" alt="articulo4">
-        </div>
-        <div>
-            <h3>Pc Gamer</h3>
-            <p> $30.000</p>
-        </div>
-    </article>
-    <article>
-        <div>
-            <img src="/img/teclado.jpg" alt="articulo5">
-        </div>
-        <div>
-            <h3>Teclado genius</h3>
-            <p>$2000</p>
-        </div>
-    </article>
-    <article>
-        <div>
-            <img src="img/router.jpg" alt="articulo6">
-        </div>
-        <div>
-            <h3>Router tplink</h3>
-            <p> $1500</p>
-        </div>
-    </article>
-    
+      <div class="programs">
+        <img src="img/pc.jpg" alt="">
+        <h3>PC Gamer</h3>
+        <p>$32000</p>
+        <button class="btn-comprar">Agregar</button>
+      </div>
+      <div class="programs">
+        <img src="img/placa.jpg" alt="">
+        <h3>Placa Grafica</h3>
+        <p>$15000</p>
+        <button class="btn-comprar">Agregar</button>
+      </div>
+      <div class="programs">
+        <img src="img/teclado.jpg" alt="">
+        <h3>Teclado</h3>
+        <p>$2200</p>
+        <button class="btn-comprar">Agregar</button>
+      </div>
+    </div>
+
 </section>
 
-<section>
-    <h2>
-        Servicios
-    </h2>
-    <article>
-        <h3>Reparacion</h3>
-        <p>Reperacion de pc, fuentes, placas y mas..</p>
-    </article>
+  <footer>
+    <div class="contenedor">
+      <div class="copy">
+        <p> © copyright Qode Interactive - Giuliano Ortego.</p>
+      </div>
+      <div class="redes">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <article>
-        <h3>Mantenimiento</h3>
-        <p>Mantenimiento de tu pc</p>
-    </article>
-    <article>
-        <h3>Instalacion</h3>
-        <p>Instalacion de sistema operativos y softwar utilitarios</p>
-    </article>
-</section>
-</main>
 
-<footer>
-    <p>2021 - Derechos reservados</p>
-</footer>
-</body>
+  </body>
+
+
+
 </html>
