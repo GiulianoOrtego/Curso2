@@ -10,20 +10,24 @@
   <link href = "https://fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,300; 0,700; 1400 & display = swap "rel =" stylesheet ">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />  
   <link rel="stylesheet" href="Style2.css">
 </head>
 
 <body>
   <header>
    <div class="menu"> 
-    <div class="contenedor">
-     
-      <nav class="nav">
+    <nav class="nav">
         <div class="logo">
           <i class="fa fa-laptop"></i>
+          <button class="btn-menu" id="btn-menu">
+            <i class="fa fa-bars"></i>
+          </button>
         </div>
 
-        <ul>
+        <ul class="list-item " id="menu-list-item">
           <li><a href="#">Home</a></li>
             <li><a href="#">Articulos</a></li>
             <li><a href="#">Servicios</a></li>
@@ -31,7 +35,7 @@
            <li><a href="#">Compra</a></li>
         </ul>
       </nav>
-    </div>
+    
   </div>
   
   <div class="titular"> 
@@ -77,6 +81,11 @@
     </div>
 
 </section>
+<section>
+  <h2>Nuestra Ubicacion</h2>
+  <div id="map"></div>  
+</section>
+
 
   <footer>
     <div class="contenedor">
@@ -92,6 +101,22 @@
   </footer>
 
 
+  <script src="index.js"></script>
+  <script>
+    var map = L.map('map').
+            setView([40.96, -5.66], 14);
+ 
+            L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                maxZoom: 18
+            }).addTo(map);
+
+            L.control.scale().addTo(map);
+            var marker=L.marker([40.96, -5.66], {draggable: true}).addTo(map);
+            marker.bindPopup("<p>Compaq Electronica </p>").openPopup();
+
+
+</script>
   </body>
 
 
