@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compaq Electronica</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />  
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <div class="menu"> 
+      <nav class="nav">
+        <div class="logo">
+          <i class="fa fa-laptop"></i>
+          <button class="btn-menu" id="btn-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <ul class="list-item " id="menu-list-item">
+          <button class="close"><i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <li><a href="#">Home</a></li>
+          <li><a href="#programs">Articulos</a></li>
+          <li><a href="#service">Servicios</a></li>
+          <li><a href="#map">Nuestra Ubicacion</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="titular"> 
+      <h1>Compaq Electronica</h1>
+      <p>Elige ,paga y recibilo sin moverte de tu casa.</p>
+    </div>
+  </header>
+
+  <section id="programs" class="section-programs">
+    <div class="contenedor">
+      <h2>Articulos</h2>
+        <div class="contenedor-programs">
+          <div class="programs">
+            <img src="img/monitor.jpg" alt="">
+            <h3>Monitor</h3>
+            <p>Poner descripcion del producto</p>
+            <p>$7800</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="programs">
+            <img src="img/router.jpg" alt="">
+            <h3>Router </h3>
+            <p>Poner descripcion del producto</p>
+            <p>$3500</p>
+            <button class="btn-comprar">Agregar</button>
+        </div>
+        <div class="programs">
+          <img src="img/pc.jpg" alt="">
+          <h3>PC Gamer</h3>
+          <p>Poner descripcion del producto</p>
+          <p>$32000</p>
+          <button class="btn-comprar">Agregar</button>
+        </div>
+        <div class="programs">
+          <img src="img/placa.jpg" alt="">
+          <h3>Placa Grafica</h3>
+          <p>Poner descripcion del producto</p>
+          <p>$15000</p>
+          <button class="btn-comprar">Agregar</button>
+        </div>
+        <div class="programs">
+          <img src="img/teclado.jpg" alt="">
+          <h3>Teclado</h3>
+          <p>Poner descripcion del producto</p>
+          <p>$2200</p>
+          <button class="btn-comprar">Agregar</button>
+        </div>
+    </div><!--Contenedor programs-->
+  </section>
+  
+  <section class="section-service" id="service">
+    <h2>Servicios</h2>
+    <div class="contenedor-service">
+        <div class="service">
+          <span><i class="fa fa-wrench" aria-hidden="true"></i></span>
+          <h4>Mantenimiento</h3>
+          <p>Ofrecemos el mantenimiento para tu pc</p>
+        </div>
+        <div class="service">
+          <span><i class="fa fa-star" aria-hidden="true"></i>
+          </span>
+          <h4>Post Venta</h3>
+          <p>Ofrecemos la mejor post-venta del mercado</p>
+        </div>
+        <div class="service">
+          <span><i class="fa fa-television" aria-hidden="true"></i>
+          </span>
+          <h4>Instalacion</h3>
+          <p>Ofrecemos la instalacion de hardware y software</p>
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Nuestra Ubicacion</h2>
+    <div id="map"></div>  
+  </section>
+
+  <footer>
+    <div class="contenedor">
+      <div class="copy">
+        <p> © copyright Qode Interactive - Giuliano Ortego.</p>
+      </div>
+      <div class="redes">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script>
+    var map = L.map('map').setView([40.96, -5.66], 14);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+        maxZoom: 18
+        }).addTo(map);
+
+    L.control.scale().addTo(map);
+    var marker=L.marker([40.96, -5.66], {draggable: true}).addTo(map);
+    marker.bindPopup("<p>Compaq Electronica </p>").openPopup();
+  </script>
+</body>
